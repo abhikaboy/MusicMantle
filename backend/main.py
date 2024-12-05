@@ -61,10 +61,10 @@ async def lifespan(app: FastAPI):
     app.artists_collection = app.database["artists"]
     print("Connected to the MongoDB database!")
     count = 0
-    for artist in full_artist_list:
-        insertEmbedding(artist, collection=app.artists_collection)
-        print(f"Inserted {count} artists")
-        count += 1
+    # for artist in full_artist_list:
+    #     insertEmbedding(artist, collection=app.artists_collection)
+    #     print(f"Inserted {count} artists")
+    #     count += 1
  
     print(f"Lifespan Startup Complete")
     yield
