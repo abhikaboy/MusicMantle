@@ -102,11 +102,6 @@ async def lifespan(app: FastAPI):
     app.artists_collection = app.database["artists"]
     print("Connected to the MongoDB database!")
 
-
-    coldplay_query = vectorQuery("radiohead", "The Smiths", app.artists_collection)
-    for artist in coldplay_query:
-        print(artist)
-
     # for artist in full_artist_list:
     #     insertEmbedding(artist, collection=app.artists_collection)
     #     print(f"Inserted {count} artists")

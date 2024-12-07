@@ -12,4 +12,8 @@ in pkgs.mkShell {
       python-pkgs.openai
     ]))
   ];
+  shellHook = ''
+    export PATH="$PATH:$(pwd)/backend"
+    export PYTHONPATH="$(pwd)/backend"    
+  '';
 }
