@@ -144,5 +144,4 @@ async def get_random_artist(request: Request):
 
 @app.get("/check", response_description="Given a query, return the artists that match the query", status_code=status.HTTP_200_OK)
 async def query_artists(term, secret, request: Request):
-    print("Secret is: " + secret)
     return list(vectorQuery(term, secret, request.app.artists_collection))
