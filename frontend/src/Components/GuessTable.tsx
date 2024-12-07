@@ -25,7 +25,7 @@ export default function GuessTable({ guesses }: Props) {
 				<h3 style={column}>Similarity</h3>
 				<h3 style={column}>Proximity</h3>
 			</div>
-			{guesses.reverse().map((guess, index) => (
+			{guesses.map((guess, index) => (
 				<div
 					key={100 - index}
 					style={{
